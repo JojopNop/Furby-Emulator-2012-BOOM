@@ -1,0 +1,17 @@
+.vibe-btn {
+    background: #2a1a44;
+    border: 1px solid #4a3a6a;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+}
+.vibe-btn:hover { background: #3a2a5a; }
+.vibe-btn.off { opacity: 0.35; filter: grayscale(1); }
+.vibe-btn.unsupported { opacity: 0.2; cursor: not-allowed; }

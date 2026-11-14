@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furby Companion</title>
+    <link rel="stylesheet" href="companion.css">
+</head>
+<body>
+<header>
+    <div class="logo">Furby</div>
+    <div id="connection" class="conn offline">offline</div>
+    <div id="model-label" class="model">—</div>
+    <button id="vibe-toggle" class="vibe-btn" title="Vibration on/off">📳</button>
+</header>
+
+    <nav>
+        <button class="tab active" data-tab="status">Status</button>
+        <button class="tab" data-tab="actions">Actions</button>
+        <button class="tab" data-tab="customize">Customize</button>
+        <button class="tab" data-tab="log">Log</button>
+    </nav>
+
+    <main>
+        <!-- STATUS -->
+        <section id="tab-status" class="tab-content active">
+            <div class="card">
+                <h2>Mood</h2>
+                <div id="mood-val" class="mood-value">—</div>
+            </div>
+            <div class="card stats">
+                <div class="stat-row">
+                    <label>🍖 Hunger</label>
+                    <div class="bar"><div id="hunger-bar" class="fill hunger"></div></div>
+                    <span id="hunger-num">0%</span>
+                </div>
+                <div class="stat-row">
+                    <label>⚡ Energy</label>
+                    <div class="bar"><div id="energy-bar" class="fill energy"></div></div>
+                    <span id="energy-num">0%</span>
+                </div>
+                <div class="stat-row">
+                    <label>💖 Friendship</label>
+                    <div class="bar"><div id="friendship-bar" class="fill friend"></div></div>
+                    <span id="friendship-num">0%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTIONS -->
+        <section id="tab-actions" class="tab-content">
+            <div class="actions-grid">
+                <button class="action" data-action="feed"><span>🍎</span>Feed</button>
+                <button class="action" data-action="play"><span>🎮</span>Play</button>
+                <button class="action" data-action="pet"><span>👋</span>Pet</button>
+                <button class="action" data-action="sing"><span>🎵</span>Sing</button>
+                <button class="action" data-action="dance"><span>💃</span>Dance</button>
+                <button class="action" data-action="joke"><span>😂</span>Joke</button>
+                <button class="action" data-action="magic"><span>✨</span>Magic</button>
+                <button class="action" data-action="sleep"><span>😴</span>Sleep</button>
+                <button class="action" data-action="wake"><span>☀️</span>Wake</button>
+            </div>
+        </section>
+
+        <!-- CUSTOMIZE -->
+        <section id="tab-customize" class="tab-content">
+            <h2>Fur Color</h2>
+            <div class="swatches">
+                <button class="swatch" data-color="none" style="background:#c9a87a" title="Original"></button>
+                <button class="swatch" data-color="sepia(1) saturate(3) hue-rotate(300deg)" style="background:#ff69b4" title="Pink"></button>
+                <button class="swatch" data-color="sepia(1) saturate(5) hue-rotate(180deg)" style="background:#4da6ff" title="Blue"></button>
+                <button class="swatch" data-color="sepia(1) saturate(3) hue-rotate(60deg)" style="background:#55cc55" title="Green"></button>
+                <button class="swatch" data-color="sepia(1) saturate(4) hue-rotate(20deg)" style="background:#ff9933" title="Orange"></button>
+                <button class="swatch" data-color="sepia(1) saturate(6) hue-rotate(330deg)" style="background:#cc3333" title="Red"></button>
+                <button class="swatch" data-color="grayscale(1)" style="background:#ccc" title="Crystal (Grey)"></button>
+                <button class="swatch" data-color="sepia(1) saturate(3) hue-rotate(270deg)" style="background:#9966cc" title="Purple"></button>
+            </div>
+            <p class="hint">Color is applied on the Furby page via CSS filter.</p>
+        </section>
+
+        <!-- LOG -->
+        <section id="tab-log" class="tab-content">
+            <div id="log" class="log-box"></div>
+        </section>
+    </main>
+
+    <script src="companion.js"></script>
+</body>
+</html>
